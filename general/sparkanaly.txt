@@ -1,0 +1,47 @@
+--logs-directory C:\logs\tmp\log\ --output-html-file C:\logs\tmp\log_stats.html --window-length 30  --slide-interval 5  --checkpoint-directory C:\logs\tmp\log-analyzer-streaming
+
+spark-submit spark-logs-analyzer_2.11-2.0-assembly.jar --logs-directory C:\logs\tmp\log\ --output-html-file C:\logs\tmp\log_stats.html --window-length 30  --slide-interval 5  --checkpoint-directory C:\logs\tmp\log-analyzer-streaming
+
+
+debug:--driver-java-options "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+
+spark-submit spark-logs-analyzer_2.11-2.0-assembly.jar --logs-directory C:\logs\tmp\log\ --output-html-file C:\logs\tmp\log_stats.html --window-length 30  --slide-interval 5  --checkpoint-directory C:\logs\tmp\log-analyzer-streaming --driver-java-options "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+
+
+kafka 推荐书籍？
+huxihx  分布式系统爱好者 http://www.cnblogs.com/huxi2b/
+89 人赞同了该回答
+Kafka目前没有特别完备的中文资料，不过还是搜集了一些，希望对楼主有用：
+
+英文部分
+
+1. 官网： Apache Kafka     自然是最重要的，其实把官网文档完全理解了已经算是掌握得非常好了
+
+2. JIRA列表：Kafka - ASF JIRA Kafka issue列表，使用关键字去搜索你碰到的实际问题
+
+3. Kafka KIP： Kafka Improvement Proposals 可以看到最新的Kafka新功能提议及其讨论
+
+4. Kafka设计文档：Index - Apache Kafka - Apache Software Foundation 几乎可以找到所有的Kafka设计文档，其中关于controller和新版client的文章非常值得一看
+
+5. StackOverflow: Newest &#x27;apache-kafka&#x27; Questions stackoverflow上的kafka问题区，里面多是小白问题，但有些问题也是很有深度的~~
+
+6. IRC归档日志： IRC Logs for #apache-kafka IRC频道中有很多有价值的问题，有时候不比stackoverflow差
+
+7. Confluent Blog： Confluent Blog: Apache Kafka Best Practices, Product Updates &amp; More   Kafka开发团队维护的一个技术博客，里面很多极具技术深度的文章
+
+中文部分
+
+1. 美团李志涛博客：apache kafka技术分享系列(目录索引) - 李志涛的专栏 - 博客频道 - CSDN.NET  这是Kafka中国社区QQ群管理员李志涛的博客，里面的内容很详尽，虽然更新程度并不是很快
+
+2. 我的博客(厚着脸皮推荐一下)：胡夕 - 博客园  我的博客没有像我们群主大大李志涛那样有清晰的目录结构，只是随性而为，想到什么就写什么了。有兴趣也可以看看
+
+3. OrcHome: kafka中文教程 - OrcHome  不知道这是国内的哪位大神维护的一个Kafka问答网站，里面的内容不输李志涛的博客，有兴趣也可以看看
+
+4. Kafka中国社区QQ群(再厚着脸皮推荐一下。。。)： 162272557， 国内最大的Kafka技术qq群，有兴趣可以加进来一起讨论
+
+5. 还有就是一些散布在网上的其他文章了， 只是在阅读时一定注意发表时间。2015年或以前发表的多是老版本Kafka的一些特性，要注意与新版本的适配性。
+
+
+希望对你有多帮助~~~
+
+发布于 2017-02-23
